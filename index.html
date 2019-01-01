@@ -1820,15 +1820,7 @@
       $("#sponsors-box").html(sponsorsBox);
     });
 
-    var animData = {
-      container: document.getElementById('ripple'),
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: 'img/ripple.json'
-    };
-    var anim = bodymovin.loadAnimation(animData);
-    window.onresize = anim.resize.bind(anim);
+    
 
     // Register the service worker
     if ('serviceWorker' in navigator) {
