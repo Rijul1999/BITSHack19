@@ -207,7 +207,28 @@
 	<div class="col-lg-12" style="margin-top: 2.5rem !important">
           <div class="rectangle" style="display:grid; grid-template-columns:1fr 1fr 1fr">
 		  <div class="button box" style="text-align:center; grid-column:1/2">
-		<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://devfolio.co">Go to Devfolio Dashboard</a>
+		<button class="btn btn-primary btn-xl js-scroll-trigger" href="https://devfolio.co">Go to Devfolio Dashboard</button>
+
+		<script type ="text/javascript">
+			document.addEventListener('DOMContentLoaded', function() {
+					let devfolioOptions = {
+						buttonSelector: '#btn btn-primary btn-xl js-scroll-trigger',
+						key: 'bitshack',
+					}
+
+					let script = document.createElement('script');
+					script.src = "https://apply.devfolio.co";
+					document.head.append(script);
+
+					script.onload = function(){
+						document.querySelector(devfolioOptions.buttonSelector).addEventListener('click', function() {
+														window.location.href = 'https://devfolio.co/extern
+al-apply/' + devfolioOptions.key;
+			});
+		}
+	});
+		</script>
+			
 			<!--<p style="color:whiter">Registrations Open!</p>-->
 		  </div>
 		</div>
